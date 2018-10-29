@@ -26,7 +26,7 @@ $ composer update
 
   - Criar banco de dados "srcidadao", disponível [aqui](https://github.com/wagner-goncalves/srcidadao-coletor-camara/blob/master/db/camara.sql). 
   - Configurar conexão com o banco de dados e a pasta onde os arquivos XML serão baixados no arquivo /src/Camara/Config/.config.
-  - Conceder permissão de escrita para a pasta configurada anteriormente para receber os XMLs baixados.
+  - Conceder permissão de escrita para a pasta configurada (.config) anteriormente para receber os XMLs baixados.
   - Configurar eventuais exceções de firewall, uma vez que a biblioteca conecta-se no site remoto da Câmara dos Deputados.
 
 # Como usar
@@ -47,7 +47,7 @@ use SrCidadao\Coletor\Camara\Processor;
 $dotenv = new Dotenv\Dotenv(__DIR__ . "/../src/Camara/Config/", ".config");
 $dotenv->load();
 
-//Codigo sequencial. Deve ser gerado na tabela camara_processamento
+//Codigo sequencial. Deve ser gerado na tabela camara_processamento antes de iniciar o download e processamento.
 $codProcessamento = 1; 
 
 $downloader = new Downloader($codProcessamento); // Passo 1, download da XMLs

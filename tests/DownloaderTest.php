@@ -24,7 +24,7 @@ class DownloaderTest extends TestCase
     private function getProcessor($codProcessamento){
         return new SrCidadao\Coletor\Camara\Processor($codProcessamento);
     }    
-/*
+
     public function testObterPartidosCD()
     {
       $result = $this->getDownloader(1)->obterPartidosCD();
@@ -58,7 +58,7 @@ class DownloaderTest extends TestCase
 
       $this->assertTrue(is_array($result));
     }  
-*/    
+ 
     public function testListarProposicoesVotadasEmPlenario()
     {
       $result = $this->getDownloader(1)->listarProposicoesVotadasEmPlenario(date("Y"), date("Y"));
