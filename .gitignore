@@ -1,0 +1,4 @@
+vendor/
+downloads/
+composer.lock
+.DS_Store
